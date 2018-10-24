@@ -191,6 +191,7 @@ def pr2_mover(object_list):
     # Get/Read parameters, put them into a dictinoary
     object_list_param = rospy.get_param('/object_list')
     dropbox_param = rospy.get_param('/dropbox')
+    test_scene_num = rospy.get_param('/test_scene_num')
 
     object_dict_param = { d['name']: d['group'] for d in object_list_param }
     dropbox_dict_param = {}
@@ -217,7 +218,7 @@ def pr2_mover(object_list):
         group = object_dict_param[label]
         
         # Assgin test case
-        test_scene_num.data = 3
+        test_scene_num.data = int(test_scene_num)
 
         # Assgin current object label
         object_name.data = str(label)
@@ -256,7 +257,7 @@ def pr2_mover(object_list):
             print "Service call failed: %s"%e
 
     # Output your request parameters into output yaml file
-    yaml_filename = 'output_list_3.yaml'
+    yaml_filename = 'output_list_' + str(test_scene_num) + '.yaml'
     send_to_yaml(yaml_filename, dict_list)
 
 
