@@ -4,8 +4,8 @@
 
 ---
 
-## [Rubric](https://review.udacity.com/#!/rubrics/1067/view) Points
-### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
+### [Rubric](https://review.udacity.com/#!/rubrics/1067/view) Points
+#### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
 
 ---
 
@@ -15,8 +15,7 @@
 [image2]: ./project_image/table.png
 [image3]: ./project_image/segment.png
 [image4]: ./project_image/training_result.png
-
-
+[image5]: ./project_image/recognition.png
 
 
 ### Writeup / README
@@ -67,7 +66,7 @@ I get 3/3 and 5/5 in test1 and test2 respectively.
 However, I get 7/8 in test3. The yellow book is mis-recongized as stick_notes.
 
 
-Here is the training result in test3.world:
+Here is the training result of all 8 objects:
 
 ![image4]
 
@@ -79,7 +78,7 @@ Here is the object recognition result in test3.world:
 
 #### 1. For all three tabletop setups (`test*.world`), perform object recognition, then read in respective pick list (`pick_list_*.yaml`). Next construct the messages that would comprise a valid `PickPlace` request output them to `.yaml` format.
 
-The output files [output_list_1.yaml](./output/output_list_1.yaml), [output_list_2.yaml](./output/output_list_2.yaml) and [output_list_2.yaml](./output/output_list_2.yaml) to each test world respectively is generated.
+The output files [output_list_1.yaml](./output/output_list_1.yaml), [output_list_2.yaml](./output/output_list_2.yaml) and [output_list_2.yaml](./output/output_list_2.yaml) to each test world respectively are generated.
 
 The message particularly is sent to ros service `resp = pick_place_routine(test_scene_num, object_name, arm_name, pick_pose, place_pose)` .
 
