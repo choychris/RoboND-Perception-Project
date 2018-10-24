@@ -78,7 +78,7 @@ Here is the object recognition result in test3.world:
 
 #### 1. For all three tabletop setups (`test*.world`), perform object recognition, then read in respective pick list (`pick_list_*.yaml`). Next construct the messages that would comprise a valid `PickPlace` request output them to `.yaml` format.
 
-The output files [output_list_1.yaml](./output/output_list_1.yaml), [output_list_2.yaml](./output/output_list_2.yaml) and [output_list_2.yaml](./output/output_list_2.yaml) to each test world respectively are generated.
+The output files [output_list_1.yaml](./output/output_list_1.yaml), [output_list_2.yaml](./output/output_list_2.yaml) and [output_list_3.yaml](./output/output_list_3.yaml) to each test world respectively are generated.
 
 The message particularly is sent to ros service `resp = pick_place_routine(test_scene_num, object_name, arm_name, pick_pose, place_pose)` .
 
