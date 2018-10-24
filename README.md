@@ -11,7 +11,13 @@
 
 [//]: # (Image References)
 
-[image1]: ./project_images/FK_demo.png
+[image1]: ./project_image/filtering.png
+[image2]: ./project_image/table.png
+[image3]: ./project_image/segment.png
+[image4]: ./project_image/training_result.png
+
+
+
 
 ### Writeup / README
 
@@ -57,11 +63,15 @@ In this project, I use **0.008m minimum distance, 500 min size and 15000 max siz
 After object segmentation, I use support vector machine (SVM) to perform object recognition.
 In the training part, I use 100 training data for each object. For kernel choice, `linear` kernel works well. I tried `rbf` kernel but it just overfits the data.
 
-Here is the training result:
+I get 3/3 and 5/5 in test1 and test2 respectively.
+However, I get 7/8 in test3. The yellow book is mis-recongized as stick_notes.
+
+
+Here is the training result in test3.world:
 
 ![image4]
 
-Here is the object recognition result: 
+Here is the object recognition result in test3.world: 
 
 ![image5]
 
@@ -78,7 +88,10 @@ The message particularly is sent to ros service `resp = pick_place_routine(test_
 
 2. SVM cannot do >90% recognition accuracy in this project. I can further try different kernel and other paramters in sklean SVM algorithm like C, gamma, probabiliy and coef0.
 
-3. Working on the challenge part. I will make update when the challenge is done. 
+As shown in the above image, in test3.world, the book object is recognized incorrectly as sticky_note.
+This incorrect recognition can be solved by better SVm training and better tuning in filters.
+
+4. Working on the challenge part. I will make update when the challenge is done. 
 
 
 
