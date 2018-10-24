@@ -30,7 +30,7 @@ Second, I use a pass through filter `make_passthrough_filter` from pcl to perfor
 
 Third, I use RANSAC algorithm i.e the `pcl.SACMODEL_PLANE` and `pcl.SAC_RANSAC`, to separate the table (a plane object) and the target objects.
 
-For the full code implemention in python, please check [HERE] (/pr2_robot/scripts/project_template.py).
+For the full code implemention in python, please check [HERE](/pr2_robot/scripts/project_template.py).
 
 As shown in the pictures, after filtering, we can separate the target objects without noises.
 
@@ -47,7 +47,7 @@ PCL EuclideanCluster method only works for point cloud data without color. So, w
 
 The essential part of Euclidean Cluster is to determine proper **minimum distance** between points and **minimum size of points** to form a cluster.
 
-In this project, I use *0.008m minimum distance, 500 min size and 15000 max size* to achieve the following segment result:
+In this project, I use **0.008m minimum distance, 500 min size and 15000 max size** to achieve the following segment result:
 
 ![image3]
 
